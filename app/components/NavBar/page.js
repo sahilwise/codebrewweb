@@ -11,7 +11,7 @@ export default function NavBar() {
   const toggleSidebar = () => setIsOpen(!isOpen)
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative">
       <button
         className="fixed top-4 left-4 z-50"
         onClick={toggleSidebar}
@@ -28,17 +28,12 @@ export default function NavBar() {
         <nav className="p-4 mt-16">
           <ul className="space-y-2 font-semibold text-sm">
             <li><a href="#" className="block p-2 hover:bg-accent rounded">Home</a></li>
-            <li><a href="#" className="block p-2 hover:bg-accent rounded">About</a></li>
+            <li><a href="#" className="block p-2 hover:bg-accent rounded">About</a></li> 
             <li><a href="#" className="block p-2 hover:bg-accent rounded">Services</a></li>
             <li><a href="#" className="block p-2 hover:bg-accent rounded">Contact</a></li>
           </ul>
         </nav>
       </div>
-
-      <main className={`p-12 px-32 ${isOpen ? 'ml-64' : ''} transition-margin duration-300 ease-in-out`}>
-        <h1 className="text-2xl font-black mb-4">CodeBrew</h1>
-        <p>Your main content goes here. This area will shift when the sidebar opens and closes.</p>
-      </main>
     </div>
   )
 }
